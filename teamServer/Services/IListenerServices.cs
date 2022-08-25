@@ -2,12 +2,12 @@
 
 namespace teamServer.Services
 {
-    //inteface : 
+    //inteface : https://www.geeksforgeeks.org/c-sharp-interface/
     public interface IListenerServices
     {
         void AddListener(Listener listener);
 
-        //Ienumerable:
+        //Ienumerable: provide flexibility in data type of list
         IEnumerable<Listener> GetListeners();
 
         Listener GetListener(string name);

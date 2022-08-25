@@ -7,7 +7,7 @@
 
         private CancellationTokenSource _tokenCancel;
 
-        //taking take required inputs(name and port)
+        //taking the required inputs(name and port)
         public HttpListener(String name, int bindPort)
         {
             Name = name;
@@ -27,10 +27,10 @@
                     //https://www.geeksforgeeks.org/explain-configureservices-and-configure-method-in-asp-net/
                 });
 
-            var host = hostBuilder.Build();
+            
 
             _tokenCancel = new CancellationTokenSource();
-
+            var host = hostBuilder.Build();
             host.RunAsync(_tokenCancel.Token);
         }
 
