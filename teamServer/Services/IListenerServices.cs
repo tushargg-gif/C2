@@ -24,7 +24,7 @@ namespace teamServer.Services
 
         public Listener GetListener(string name)
         {
-            return GetListeners().FirstOrDefault(l => l.Name.Equals(name));
+            return GetListeners().FirstOrDefault(l => l.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<Listener> GetListeners()
